@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <nav class="topbar">
+        <div class="topbar-inner">
+            <a href="/blogs" class="brand">MyBlog</a>
+            <div class="topnav">
+                <a href="/blogs">Home</a>
+                <a href="/signup">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+    <div class="form-wrap">
+        <h1 style="margin-bottom: 24px;">Login</h1>
+        <% if (error) { %>
+            <div class="error-msg">
+                <%= error %>
+            </div>
+            <% } %>
+                <form action="/login" method="POST">
+                    <div class="form-row">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" id="username" name="username" class="form-input" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" id="password" name="password" class="form-input" required>
+                    </div>
+                    <button type="submit" class="form-btn">Login</button>
+                </form>
+                <p class="form-link" style="margin-top: 18px;">
+                    Don't have an account? <a href="/signup" class="form-link">Sign up here</a>
+                </p>
+    </div>
+    <footer class="site-footer">
+        <p>&copy; 2024 MyBlog. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
